@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <title>Aang — Element Masters Gym</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img src="/logo.svg" alt="" class="logo-mark" width="44" height="44">
+        <span>Element Masters <em>Gym</em></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule.html">Schedule</a></li>
+          <li><a href="/classes.html">Classes</a></li>
+          <li><a href="/cafe.html">Café</a></li>
+          <li><a href="/equipment.html">Equipment</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/nutrition.html">Nutrition</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="/team.html" class="coach-back">← Back to Team</a>
+
+    <div class="coach-profile-hero">
+      <div class="coach-headshot-wrap air">
+        <img loading="lazy" src="/images/coaches/aang.png" alt="Aang" class="coach-headshot">
+      </div>
+      <div>
+        <p class="coach-badge air">Air — Agility & Balance</p>
+        <h1>Aang</h1>
+        <p class="coach-tagline">The last Air Nomad teaches <em>The Gust</em> — light feet, open lungs, and joy in movement.</p>
+      </div>
+    </div>
+
+    <section class="coach-section">
+      <h2>Who He Is</h2>
+      <p>
+        Marked by the arrow tattoo that guides Element Masters Gym's philosophy, Aang brings Air Nomad principles to
+        every session: agility without ego, balance without rigidity, and breath as the foundation of all movement.
+        His classes feel playful but precise — jumps, spins, bodyweight flow, and mindful footwork that make members
+        feel like they're flying without leaving the floor.
+      </p>
+    </section>
+
+    <section class="coach-section">
+      <h2>Services Offered</h2>
+      <ul class="service-list">
+        <li><strong>Airbender Agility</strong> — signature class with balance drills, footwork, and bodyweight flow.</li>
+        <li><strong>Mobility & Breathwork</strong> — joint prep and breathing techniques before heavy training days.</li>
+        <li><strong>Acrobatic Foundations</strong> — safe progressions for rolls, jumps, and coordination work.</li>
+        <li><strong>Four-Element Balance Check</strong> — assessment sessions to keep your training well-rounded.</li>
+      </ul>
+    </section>
+
+    <section class="appointment-section coach-section" id="book">
+      <h2>Book with Aang</h2>
+      <form class="appointment-form" data-coach="Aang">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="date">Preferred date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-row">
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="Airbender Agility class">Airbender Agility class</option>
+            <option value="Mobility and breathwork">Mobility and breathwork</option>
+            <option value="Acrobatic foundations">Acrobatic foundations</option>
+            <option value="Four-element balance check">Four-element balance check</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Notes (optional)</label>
+          <textarea id="message" name="message" placeholder="Experience level or movement goals"></textarea>
+        </div>
+        <button type="submit" class="btn">Request Appointment</button>
+      </form>
+      <div class="form-success" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Element Masters <span class="brand-footer">Gym</span> — Water · Earth · Fire · Air</p>
+    <p class="footer-meta">© 2026 Element Masters Gym</p>
+  </footer>
+  <script src="/coach-form.js"></script>
+</body>
+</html>

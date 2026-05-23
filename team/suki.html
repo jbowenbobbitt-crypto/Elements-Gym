@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <title>Suki — Element Masters Gym</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img src="/logo.svg" alt="" class="logo-mark" width="44" height="44">
+        <span>Element Masters <em>Gym</em></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule.html">Schedule</a></li>
+          <li><a href="/classes.html">Classes</a></li>
+          <li><a href="/cafe.html">Café</a></li>
+          <li><a href="/equipment.html">Equipment</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/nutrition.html">Nutrition</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="/team.html" class="coach-back">← Back to Team</a>
+
+    <div class="coach-profile-hero">
+      <div class="coach-headshot-wrap kyoshi">
+        <img loading="lazy" src="/images/coaches/suki.png" alt="Suki" class="coach-headshot">
+      </div>
+      <div>
+        <p class="coach-badge kyoshi">Kyoshi Warrior — Women's Self Defense</p>
+        <h1>Suki</h1>
+        <p class="coach-tagline">Captain of the Kyoshi Warriors — precise stances, real-world awareness, and unshakeable confidence.</p>
+      </div>
+    </div>
+
+    <section class="coach-section">
+      <h2>Who She Is</h2>
+      <p>
+        Leader of the Kyoshi Warriors, Suki brings battlefield discipline to the gym floor. Her program teaches
+        fan-style blocks and strikes (using pads and trainers, not metal fans), wrist escapes, ground recovery, and
+        situational awareness. Open to all women; no experience required — only respect for the craft and for each other.
+      </p>
+    </section>
+
+    <section class="coach-section">
+      <h2>Services Offered</h2>
+      <ul class="service-list">
+        <li><strong>Kyoshi Guard Class</strong> — group women's self-defense with stances, strikes, and escapes.</li>
+        <li><strong>Private Defense Coaching</strong> — one-on-one sessions tailored to personal safety goals.</li>
+        <li><strong>Confidence & Awareness Workshop</strong> — boundary-setting, distance reading, and de-escalation.</li>
+        <li><strong>Warrior Conditioning</strong> — strength and agility work specific to self-defense scenarios.</li>
+      </ul>
+    </section>
+
+    <section class="appointment-section coach-section" id="book">
+      <h2>Book with Suki</h2>
+      <form class="appointment-form" data-coach="Suki">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="date">Preferred date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-row">
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="Kyoshi Guard class">Kyoshi Guard class</option>
+            <option value="Private defense coaching">Private defense coaching</option>
+            <option value="Confidence and awareness workshop">Confidence and awareness workshop</option>
+            <option value="Warrior conditioning">Warrior conditioning</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Notes (optional)</label>
+          <textarea id="message" name="message" placeholder="Experience level or specific concerns"></textarea>
+        </div>
+        <button type="submit" class="btn">Request Appointment</button>
+      </form>
+      <div class="form-success" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Element Masters <span class="brand-footer">Gym</span> — Water · Earth · Fire · Air</p>
+    <p class="footer-meta">© 2026 Element Masters Gym</p>
+  </footer>
+  <script src="/coach-form.js"></script>
+</body>
+</html>

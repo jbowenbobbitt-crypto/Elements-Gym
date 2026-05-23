@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <title>Uncle Iroh — Element Masters Gym</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img src="/logo.svg" alt="" class="logo-mark" width="44" height="44">
+        <span>Element Masters <em>Gym</em></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule.html">Schedule</a></li>
+          <li><a href="/classes.html">Classes</a></li>
+          <li><a href="/cafe.html">Café</a></li>
+          <li><a href="/equipment.html">Equipment</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/nutrition.html">Nutrition</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="/team.html" class="coach-back">← Back to Team</a>
+
+    <div class="coach-profile-hero">
+      <div class="coach-headshot-wrap iroh">
+        <img loading="lazy" src="/images/coaches/iroh.png" alt="Uncle Iroh" class="coach-headshot">
+      </div>
+      <div>
+        <p class="coach-badge iroh">Nutrition · The Jasmine Dragon Café</p>
+        <h1>Uncle Iroh</h1>
+        <p class="coach-tagline">Wise tea master, keeper of the café, and believer that strength comes from balance — not just the gym floor.</p>
+      </div>
+    </div>
+
+    <section class="coach-section">
+      <h2>Who He Is</h2>
+      <p>
+        Once Dragon of the West, now Dragon of the Jasmine Leaf — Iroh runs The Jasmine Dragon Café inside Element Masters
+        Gym and offers personal nutrition consultations for members who want food and drink working <em>with</em> their
+        training. He maps plates to class schedules, builds practical meal plans without extreme diets, and always has
+        time for a cup of jasmine tea and honest advice.
+      </p>
+    </section>
+
+    <section class="coach-section">
+      <h2>Services Offered</h2>
+      <ul class="service-list">
+        <li><strong>Custom Meal Plan</strong> — macros and meals tailored to your class load and goals.</li>
+        <li><strong>Hydration Strategy</strong> — pre- and post-workout drinking plans paired with café options.</li>
+        <li><strong>Goal Alignment</strong> — fat loss, muscle gain, or maintenance without fad diets.</li>
+        <li><strong>Café Coaching</strong> — a personal guide to The Jasmine Dragon menu for every training day.</li>
+        <li><strong>Follow-Up Check-In</strong> — plan adjustments as your element training evolves.</li>
+      </ul>
+    </section>
+
+    <section class="appointment-section coach-section" id="book">
+      <h2>Book a Nutrition Consultation</h2>
+      <p class="section-note">
+        This form is linked from the <a href="/nutrition.html">Nutrition page</a>, <a href="/cafe.html">Café menu</a>,
+        and homepage. Submit a request and Iroh will confirm within 24 hours (demo).
+      </p>
+      <form class="appointment-form" data-coach="Uncle Iroh">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="date">Preferred date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-row">
+          <label for="service">Consultation type</label>
+          <select id="service" name="service" data-default="Custom Meal Plan" required>
+            <option value="Custom Meal Plan">Custom Meal Plan</option>
+            <option value="Hydration Strategy">Hydration Strategy</option>
+            <option value="Goal Alignment">Goal Alignment</option>
+            <option value="Café Coaching">Café Coaching</option>
+            <option value="Follow-Up Check-In">Follow-Up Check-In</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Tell Iroh about your training</label>
+          <textarea id="message" name="message" placeholder="Current classes, goals, allergies, and what you enjoy eating" required></textarea>
+        </div>
+        <button type="submit" class="btn">Request Consultation</button>
+      </form>
+      <div class="form-success" hidden></div>
+    </section>
+
+    <div class="cafe-nutrition-cta section-cta">
+      <h2>Visit The Jasmine Dragon</h2>
+      <p>Every café item is designed to support your training. See the full menu before your consult.</p>
+      <a href="/cafe.html" class="btn">View Café Menu</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Element Masters <span class="brand-footer">Gym</span> — Water · Earth · Fire · Air</p>
+    <p class="footer-meta">© 2026 Element Masters Gym</p>
+  </footer>
+  <script src="/coach-form.js"></script>
+</body>
+</html>

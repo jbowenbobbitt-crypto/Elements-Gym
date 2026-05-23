@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <title>Zuko — Element Masters Gym</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img src="/logo.svg" alt="" class="logo-mark" width="44" height="44">
+        <span>Element Masters <em>Gym</em></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule.html">Schedule</a></li>
+          <li><a href="/classes.html">Classes</a></li>
+          <li><a href="/cafe.html">Café</a></li>
+          <li><a href="/equipment.html">Equipment</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/nutrition.html">Nutrition</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="/team.html" class="coach-back">← Back to Team</a>
+
+    <div class="coach-profile-hero">
+      <div class="coach-headshot-wrap fire">
+        <img loading="lazy" src="/images/coaches/zuko.png" alt="Zuko" class="coach-headshot">
+      </div>
+      <div>
+        <p class="coach-badge fire">Fire — HIIT & Conditioning</p>
+        <h1>Zuko</h1>
+        <p class="coach-tagline">Former Fire Nation prince turned redemption story — now he channels that fire into <em>The Ember</em>.</p>
+      </div>
+    </div>
+
+    <section class="coach-section">
+      <h2>Who He Is</h2>
+      <p>
+        Zuko knows what it means to burn out and rebuild. At Element Masters Gym he leads high-intensity intervals,
+        explosive circuits, and metabolic finishers that mirror firebending's sudden bursts of power. He pushes hard but
+        fairly — because he learned the hard way that discipline beats rage every time.
+      </p>
+    </section>
+
+    <section class="coach-section">
+      <h2>Services Offered</h2>
+      <ul class="service-list">
+        <li><strong>Firebender Burn</strong> — signature HIIT class with sprints, ropes, and battle-station rounds.</li>
+        <li><strong>Conditioning Circuits</strong> — timed work-rest blocks for fat burn and athletic endurance.</li>
+        <li><strong>Explosive Power Drills</strong> — plyometrics and speed work for sport-ready members.</li>
+        <li><strong>Accountability Coaching</strong> — weekly check-ins for members who need structure to stay consistent.</li>
+      </ul>
+    </section>
+
+    <section class="appointment-section coach-section" id="book">
+      <h2>Book with Zuko</h2>
+      <form class="appointment-form" data-coach="Zuko">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="date">Preferred date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-row">
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="Firebender Burn class">Firebender Burn class</option>
+            <option value="Conditioning circuit">Conditioning circuit</option>
+            <option value="Explosive power drills">Explosive power drills</option>
+            <option value="Accountability coaching">Accountability coaching</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Notes (optional)</label>
+          <textarea id="message" name="message" placeholder="Fitness level, goals, or schedule preferences"></textarea>
+        </div>
+        <button type="submit" class="btn">Request Appointment</button>
+      </form>
+      <div class="form-success" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Element Masters <span class="brand-footer">Gym</span> — Water · Earth · Fire · Air</p>
+    <p class="footer-meta">© 2026 Element Masters Gym</p>
+  </footer>
+  <script src="/coach-form.js"></script>
+</body>
+</html>

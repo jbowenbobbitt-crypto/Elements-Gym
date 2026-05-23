@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <title>Azula — Element Masters Gym</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img src="/logo.svg" alt="" class="logo-mark" width="44" height="44">
+        <span>Element Masters <em>Gym</em></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule.html">Schedule</a></li>
+          <li><a href="/classes.html">Classes</a></li>
+          <li><a href="/cafe.html">Café</a></li>
+          <li><a href="/equipment.html">Equipment</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/nutrition.html">Nutrition</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="/team.html" class="coach-back">← Back to Team</a>
+
+    <div class="coach-profile-hero">
+      <div class="coach-headshot-wrap lightning">
+        <img loading="lazy" src="/images/coaches/azula.png" alt="Azula" class="coach-headshot">
+      </div>
+      <div>
+        <p class="coach-badge lightning">Blue Lightning — Extreme Conditioning</p>
+        <h1>Azula</h1>
+        <p class="coach-tagline">Maximum intensity. Zero mercy. One hour of <em>Blue Lightning</em> — if you survive, you transform.</p>
+      </div>
+    </div>
+
+    <section class="coach-section">
+      <h2>Who She Is</h2>
+      <p>
+        The Fire Nation princess brings surgical precision to suffering. Azula's signature session stacks burpees, sled
+        pushes, kettlebell complexes, battle ropes, and bodyweight burners back-to-back with almost no rest. She demands
+        perfection because she expects it of herself. Not for beginners. Not for the faint of heart. For those who want
+        to find out exactly how much they can endure.
+      </p>
+    </section>
+
+    <section class="coach-section">
+      <h2>Services Offered</h2>
+      <ul class="service-list">
+        <li><strong>Blue Lightning</strong> — the full 60-minute group hell-session (advance booking required).</li>
+        <li><strong>Elite Conditioning Assessment</strong> — fitness screening before your first Blue Lightning class.</li>
+        <li><strong>Competition Prep</strong> — high-volume programming for athletes peaking for events.</li>
+        <li><strong>Private Intensity Block</strong> — one-on-one sessions for experienced members only.</li>
+      </ul>
+    </section>
+
+    <section class="appointment-section coach-section" id="book">
+      <h2>Book with Azula</h2>
+      <form class="appointment-form" data-coach="Azula">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="date">Preferred date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-row">
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="Blue Lightning class">Blue Lightning class</option>
+            <option value="Elite conditioning assessment">Elite conditioning assessment</option>
+            <option value="Competition prep">Competition prep</option>
+            <option value="Private intensity block">Private intensity block</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Notes (optional)</label>
+          <textarea id="message" name="message" placeholder="Training history and medical clearance"></textarea>
+        </div>
+        <button type="submit" class="btn">Request Appointment</button>
+      </form>
+      <div class="form-success" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Element Masters <span class="brand-footer">Gym</span> — Water · Earth · Fire · Air</p>
+    <p class="footer-meta">© 2026 Element Masters Gym</p>
+  </footer>
+  <script src="/coach-form.js"></script>
+</body>
+</html>

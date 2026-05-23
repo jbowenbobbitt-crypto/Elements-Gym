@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <title>Sokka — Element Masters Gym</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img src="/logo.svg" alt="" class="logo-mark" width="44" height="44">
+        <span>Element Masters <em>Gym</em></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule.html">Schedule</a></li>
+          <li><a href="/classes.html">Classes</a></li>
+          <li><a href="/cafe.html">Café</a></li>
+          <li><a href="/equipment.html">Equipment</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/nutrition.html">Nutrition</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="/team.html" class="coach-back">← Back to Team</a>
+
+    <div class="coach-profile-hero">
+      <div class="coach-headshot-wrap combat">
+        <img loading="lazy" src="/images/coaches/sokka.png" alt="Sokka" class="coach-headshot">
+      </div>
+      <div>
+        <p class="coach-badge combat">Combat — Military Training</p>
+        <h1>Sokka</h1>
+        <p class="coach-tagline">The idea guy, the planner, and the loudest voice in <em>Combat</em> — Southern Water Tribe boot camp, gym edition.</p>
+      </div>
+    </div>
+
+    <section class="coach-section">
+      <h2>Who He Is</h2>
+      <p>
+        Sokka may not bend elements, but he bends groups into teams. A self-appointed tactician and proud non-bender,
+        he runs Combat class like a war camp: drill formations, partner defense, striking combos, and weapon-footwork
+        patterns modeled after Water Tribe warrior training. Expect orders, timed sets, and absolutely zero excuses.
+      </p>
+    </section>
+
+    <section class="coach-section">
+      <h2>Services Offered</h2>
+      <ul class="service-list">
+        <li><strong>Combat Boot Camp</strong> — group military-style sessions with partner drills and team challenges.</li>
+        <li><strong>Striking Fundamentals</strong> — pad work, combos, and defensive footwork for all levels.</li>
+        <li><strong>Tactical Team Training</strong> — small-group sessions focused on coordination and communication.</li>
+        <li><strong>Strategy Sessions</strong> — workout planning for members who want a battle plan, not guesswork.</li>
+      </ul>
+    </section>
+
+    <section class="appointment-section coach-section" id="book">
+      <h2>Book with Sokka</h2>
+      <form class="appointment-form" data-coach="Sokka">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="date">Preferred date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-row">
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="Combat boot camp">Combat boot camp</option>
+            <option value="Striking fundamentals">Striking fundamentals</option>
+            <option value="Tactical team training">Tactical team training</option>
+            <option value="Strategy session">Strategy session</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Notes (optional)</label>
+          <textarea id="message" name="message" placeholder="Training background or team size"></textarea>
+        </div>
+        <button type="submit" class="btn">Request Appointment</button>
+      </form>
+      <div class="form-success" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Element Masters <span class="brand-footer">Gym</span> — Water · Earth · Fire · Air</p>
+    <p class="footer-meta">© 2026 Element Masters Gym</p>
+  </footer>
+  <script src="/coach-form.js"></script>
+</body>
+</html>
