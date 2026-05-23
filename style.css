@@ -193,6 +193,28 @@ main {
   margin: 0 auto 2rem;
 }
 
+.gym-motto {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gym-motto--hero {
+  display: block;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: 1rem;
+}
+
+footer .gym-motto {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -516,6 +538,26 @@ footer .brand-footer {
   background: linear-gradient(90deg, rgba(244, 169, 64, 0.2), transparent);
   border-left-color: var(--air);
 }
+.coach-zone.el-combat .coach-zone-header {
+  background: linear-gradient(90deg, rgba(71, 85, 105, 0.45), transparent);
+  border-left-color: var(--combat);
+}
+.coach-zone.el-lightning .coach-zone-header {
+  background: linear-gradient(90deg, rgba(124, 58, 237, 0.35), rgba(56, 189, 248, 0.15), transparent);
+  border-left-color: var(--lightning);
+}
+.coach-zone.el-kyoshi .coach-zone-header {
+  background: linear-gradient(90deg, rgba(22, 101, 52, 0.4), rgba(212, 168, 75, 0.12), transparent);
+  border-left-color: var(--kyoshi-gold);
+}
+.coach-zone.el-blossom .coach-zone-header {
+  background: linear-gradient(90deg, rgba(252, 231, 243, 0.2), rgba(219, 39, 119, 0.12), transparent);
+  border-left-color: var(--blossom);
+}
+.coach-zone.el-mai .coach-zone-header {
+  background: linear-gradient(90deg, rgba(10, 10, 10, 0.85), transparent);
+  border-left-color: var(--mai-gray);
+}
 
 .zone-element {
   font-size: 0.8rem;
@@ -529,6 +571,11 @@ footer .brand-footer {
 .coach-zone.el-earth .zone-element { color: var(--earth); }
 .coach-zone.el-fire .zone-element { color: var(--fire); }
 .coach-zone.el-air .zone-element { color: var(--air); }
+.coach-zone.el-combat .zone-element { color: var(--combat); }
+.coach-zone.el-lightning .zone-element { color: var(--lightning); }
+.coach-zone.el-kyoshi .zone-element { color: var(--kyoshi-gold); }
+.coach-zone.el-blossom .zone-element { color: var(--blossom); }
+.coach-zone.el-mai .zone-element { color: var(--mai-silver); }
 
 .coach-zone-header h2 {
   font-size: 1.5rem;
@@ -586,6 +633,48 @@ footer .brand-footer {
 }
 .equipment-card.el-air h3 { color: var(--air); }
 
+.equipment-card.el-combat {
+  border-color: rgba(148, 163, 184, 0.45);
+}
+.equipment-card.el-combat:hover {
+  box-shadow: 0 12px 32px rgba(148, 163, 184, 0.18);
+}
+.equipment-card.el-combat h3 { color: var(--combat); }
+
+.equipment-card.el-lightning {
+  border-color: rgba(56, 189, 248, 0.45);
+}
+.equipment-card.el-lightning:hover {
+  box-shadow: 0 12px 32px rgba(56, 189, 248, 0.22);
+}
+.equipment-card.el-lightning h3 { color: var(--lightning); }
+
+.equipment-card.el-kyoshi {
+  border-color: rgba(74, 222, 128, 0.4);
+}
+.equipment-card.el-kyoshi:hover {
+  box-shadow: 0 12px 32px rgba(74, 222, 128, 0.15);
+}
+.equipment-card.el-kyoshi h3 { color: var(--kyoshi); }
+
+.equipment-card.el-blossom {
+  border-color: rgba(249, 168, 212, 0.45);
+}
+.equipment-card.el-blossom:hover {
+  box-shadow: 0 12px 32px rgba(249, 168, 212, 0.18);
+}
+.equipment-card.el-blossom h3 { color: var(--blossom); }
+
+.equipment-card.el-mai {
+  border-color: #404040;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.35), var(--bg-card));
+}
+.equipment-card.el-mai:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+.equipment-card.el-mai h3 { color: var(--text); }
+.equipment-card.el-mai p { color: #a3a3a3; }
+
 .equipment-icon {
   font-size: 2.5rem;
   margin-bottom: 0.75rem;
@@ -600,6 +689,157 @@ footer .brand-footer {
 .equipment-card p {
   color: var(--text-muted);
   font-size: 0.95rem;
+}
+
+.equipment-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.equipment-card-link:focus-visible .equipment-card {
+  outline: 2px solid var(--air);
+  outline-offset: 3px;
+}
+
+.equipment-card-hint {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.equipment-card-link:hover .equipment-card-hint,
+.equipment-card-link:focus-visible .equipment-card-hint {
+  opacity: 1;
+}
+
+.equipment-card.el-water .equipment-card-hint { color: var(--water); }
+.equipment-card.el-earth .equipment-card-hint { color: var(--earth); }
+.equipment-card.el-fire .equipment-card-hint { color: var(--fire); }
+.equipment-card.el-air .equipment-card-hint { color: var(--air); }
+.equipment-card.el-combat .equipment-card-hint { color: var(--combat); }
+.equipment-card.el-lightning .equipment-card-hint { color: var(--lightning); }
+.equipment-card.el-kyoshi .equipment-card-hint { color: var(--kyoshi-gold); }
+.equipment-card.el-blossom .equipment-card-hint { color: var(--blossom); }
+.equipment-card.el-mai .equipment-card-hint { color: var(--mai-silver); }
+
+.equipment-risk-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid transparent;
+}
+
+.equipment-risk-hero .equipment-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+}
+
+.equipment-risk-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.equipment-risk-zone {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.equipment-risk-hero.el-water {
+  border-color: var(--water);
+  background: linear-gradient(135deg, rgba(45, 106, 122, 0.35), var(--bg-card));
+}
+.equipment-risk-hero.el-water .equipment-risk-label { color: var(--water); }
+
+.equipment-risk-hero.el-earth {
+  border-color: var(--earth);
+  background: linear-gradient(135deg, rgba(74, 103, 65, 0.35), var(--bg-card));
+}
+.equipment-risk-hero.el-earth .equipment-risk-label { color: var(--earth); }
+
+.equipment-risk-hero.el-fire {
+  border-color: var(--fire);
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.25), var(--bg-card));
+}
+.equipment-risk-hero.el-fire .equipment-risk-label { color: var(--fire); }
+
+.equipment-risk-hero.el-air {
+  border-color: var(--air);
+  background: linear-gradient(135deg, rgba(244, 169, 64, 0.2), var(--bg-card));
+}
+.equipment-risk-hero.el-air .equipment-risk-label { color: var(--air); }
+
+.equipment-risk-hero.el-combat {
+  border-color: var(--combat);
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.35), var(--bg-card));
+}
+.equipment-risk-hero.el-combat .equipment-risk-label { color: var(--combat); }
+
+.equipment-risk-hero.el-lightning {
+  border-color: var(--lightning);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.35), rgba(56, 189, 248, 0.12), var(--bg-card));
+}
+.equipment-risk-hero.el-lightning .equipment-risk-label { color: var(--lightning); }
+
+.equipment-risk-hero.el-kyoshi {
+  border-color: var(--kyoshi-gold);
+  background: linear-gradient(135deg, rgba(22, 101, 52, 0.35), var(--bg-card));
+}
+.equipment-risk-hero.el-kyoshi .equipment-risk-label { color: var(--kyoshi-gold); }
+
+.equipment-risk-hero.el-blossom {
+  border-color: var(--blossom);
+  background: linear-gradient(135deg, rgba(252, 231, 243, 0.2), var(--bg-card));
+}
+.equipment-risk-hero.el-blossom .equipment-risk-label { color: var(--blossom); }
+
+.equipment-risk-hero.el-mai {
+  border-color: var(--mai-gray);
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), var(--bg-card));
+}
+.equipment-risk-hero.el-mai .equipment-risk-label { color: var(--mai-silver); }
+
+.risk-list {
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 720px;
+}
+
+.risk-list li {
+  margin-bottom: 0.85rem;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  background: rgba(196, 30, 58, 0.08);
+  border-left: 3px solid var(--fire);
+  color: var(--text-muted);
+}
+
+.risk-list li strong {
+  color: var(--text);
+}
+
+.equipment-related {
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  background: var(--bg-card);
+  border: 1px solid rgba(184, 169, 154, 0.2);
+  max-width: 720px;
+}
+
+.equipment-related p {
+  color: var(--text-muted);
+  margin: 0;
 }
 
 /* Classes */
@@ -966,6 +1206,252 @@ footer .brand-footer {
   padding-left: 0.5rem;
 }
 
+.nutrition-service-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.nutrition-service-link:focus-visible .card {
+  outline: 2px solid var(--air);
+  outline-offset: 3px;
+}
+
+.nutrition-service-hint {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.nutrition-service-link:hover .nutrition-service-hint,
+.nutrition-service-link:focus-visible .nutrition-service-hint {
+  opacity: 1;
+}
+
+.nutrition-service-link .card.el-earth .nutrition-service-hint { color: var(--earth); }
+.nutrition-service-link .card.el-water .nutrition-service-hint { color: var(--water); }
+.nutrition-service-link .card.el-fire .nutrition-service-hint { color: var(--fire); }
+.nutrition-service-link .card.el-air .nutrition-service-hint { color: var(--air); }
+
+.nutrition-detail-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid transparent;
+}
+
+.nutrition-detail-hero .num {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.nutrition-detail-hero.el-earth {
+  border-color: var(--earth);
+  background: linear-gradient(135deg, rgba(74, 103, 65, 0.35), var(--bg-card));
+}
+.nutrition-detail-hero.el-earth .num { color: var(--earth); }
+
+.nutrition-detail-hero.el-water {
+  border-color: var(--water);
+  background: linear-gradient(135deg, rgba(45, 106, 122, 0.35), var(--bg-card));
+}
+.nutrition-detail-hero.el-water .num { color: var(--water); }
+
+.nutrition-detail-hero.el-fire {
+  border-color: var(--fire);
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.25), var(--bg-card));
+}
+.nutrition-detail-hero.el-fire .num { color: var(--fire); }
+
+.nutrition-detail-hero.el-air {
+  border-color: var(--air);
+  background: linear-gradient(135deg, rgba(244, 169, 64, 0.2), var(--bg-card));
+}
+.nutrition-detail-hero.el-air .num { color: var(--air); }
+
+.philosophy-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.philosophy-card-link:focus-visible .card {
+  outline: 2px solid var(--air);
+  outline-offset: 3px;
+}
+
+.philosophy-card-hint {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.philosophy-card-link:hover .philosophy-card-hint,
+.philosophy-card-link:focus-visible .philosophy-card-hint {
+  opacity: 1;
+}
+
+.philosophy-card-link .card.el-water .philosophy-card-hint { color: var(--water); }
+.philosophy-card-link .card.el-earth .philosophy-card-hint { color: var(--earth); }
+.philosophy-card-link .card.el-fire .philosophy-card-hint { color: var(--fire); }
+.philosophy-card-link .card.el-air .philosophy-card-hint { color: var(--air); }
+
+.cafe-promo.elite-promo {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.45), rgba(124, 58, 237, 0.15), var(--bg-card));
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.cafe-promo.elite-promo h2 {
+  color: var(--lightning);
+}
+
+.cafe-promo.yoga-promo {
+  background: linear-gradient(135deg, rgba(252, 231, 243, 0.12), rgba(10, 10, 10, 0.35), var(--bg-card));
+  border-color: rgba(249, 168, 212, 0.35);
+}
+
+.cafe-promo.yoga-promo h2 {
+  color: var(--blossom);
+}
+
+.menu-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.menu-item-link:focus-visible .menu-item {
+  outline: 2px solid var(--iroh-gold);
+  outline-offset: 3px;
+}
+
+.menu-item {
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.menu-item-link:hover .menu-item,
+.menu-item-link:focus-visible .menu-item {
+  transform: translateY(-3px);
+  border-color: var(--iroh-gold);
+  box-shadow: 0 8px 24px rgba(202, 138, 4, 0.15);
+}
+
+.menu-item-hint {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--iroh-gold);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.menu-item-link:hover .menu-item-hint,
+.menu-item-link:focus-visible .menu-item-hint {
+  opacity: 1;
+}
+
+.cafe-item-hero {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(20, 83, 45, 0.35), var(--bg-card));
+  border: 1px solid rgba(202, 138, 4, 0.35);
+}
+
+.cafe-item-hero.highlight-tea {
+  border-color: var(--iroh);
+  background: linear-gradient(145deg, rgba(20, 83, 45, 0.45), var(--bg-card));
+}
+
+.cafe-item-category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--iroh-gold);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.cafe-item-hero .page-title {
+  margin-bottom: 0.75rem;
+}
+
+.cafe-item-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 720px;
+}
+
+.cafe-item-macros h2,
+.cafe-item-micros h2 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.macro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+  gap: 0.75rem;
+  max-width: 520px;
+}
+
+.macro-item {
+  background: var(--bg-card);
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid rgba(202, 138, 4, 0.2);
+}
+
+.macro-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.macro-value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--iroh-gold);
+}
+
+.micro-list {
+  margin: 0 0 0 1.25rem;
+  color: var(--text-muted);
+  max-width: 720px;
+}
+
+.micro-list li {
+  margin-bottom: 0.5rem;
+}
+
+.cafe-item-note {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  background: rgba(20, 83, 45, 0.25);
+  border-left: 3px solid var(--iroh-gold);
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
 .consult-steps strong {
   color: var(--text);
 }
@@ -1166,8 +1652,16 @@ body.home-page main {
 }
 
 body.home-page .card,
-body.home-page .cafe-promo {
+body.home-page .cafe-promo:not(.elite-promo):not(.yoga-promo) {
   background: rgba(45, 36, 32, 0.92);
+}
+
+body.home-page .cafe-promo.elite-promo {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.55), rgba(124, 58, 237, 0.2), rgba(45, 36, 32, 0.92));
+}
+
+body.home-page .cafe-promo.yoga-promo {
+  background: linear-gradient(135deg, rgba(252, 231, 243, 0.15), rgba(10, 10, 10, 0.4), rgba(45, 36, 32, 0.92));
 }
 
 /* Coach headshots */
@@ -1248,6 +1742,328 @@ body.home-page .cafe-promo {
 
 .section-cta {
   margin-top: 2rem;
+}
+
+/* Class card links (classes listing) */
+.class-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.class-card-link:focus-visible .class-card {
+  outline: 2px solid var(--air);
+  outline-offset: 3px;
+}
+
+.class-card-link .class-card-hint {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.class-card-link:hover .class-card-hint,
+.class-card-link:focus-visible .class-card-hint {
+  opacity: 1;
+}
+
+.class-card.el-water .class-card-hint { color: var(--water); }
+.class-card.el-earth .class-card-hint { color: var(--earth); }
+.class-card.el-fire .class-card-hint { color: var(--fire); }
+.class-card.el-air .class-card-hint { color: var(--air); }
+.class-card.el-combat .class-card-hint { color: var(--combat); }
+.class-card.el-lightning .class-card-hint { color: var(--lightning); }
+.class-card.el-kyoshi .class-card-hint { color: var(--kyoshi-gold); }
+.class-card.el-blossom .class-card-hint { color: var(--blossom); }
+.class-card.el-mai .class-card-hint { color: var(--mai-silver); }
+
+.class-card .duration-badge {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(184, 169, 154, 0.15);
+  color: var(--text-muted);
+  border: 1px solid rgba(184, 169, 154, 0.35);
+}
+
+/* Class detail pages */
+.class-detail-hero {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  border: 2px solid transparent;
+}
+
+.class-detail-hero .class-detail-header {
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.class-detail-hero .element-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.class-detail-hero .nickname {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.class-detail-hero h1 {
+  font-size: 2rem;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.class-detail-hero .duration-badge,
+.class-detail-hero .intensity-badge {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.class-detail-hero.el-water {
+  border-color: var(--water);
+  box-shadow: 0 8px 32px rgba(94, 184, 212, 0.15);
+}
+.class-detail-hero.el-water .class-detail-header {
+  background: linear-gradient(180deg, rgba(45, 106, 122, 0.6), transparent);
+}
+.class-detail-hero.el-water h1,
+.class-detail-hero.el-water .nickname { color: var(--water); }
+.class-detail-hero.el-water .duration-badge {
+  background: rgba(94, 184, 212, 0.2);
+  color: var(--water);
+  border: 1px solid var(--water);
+}
+
+.class-detail-hero.el-earth {
+  border-color: var(--earth);
+  box-shadow: 0 8px 32px rgba(122, 158, 90, 0.15);
+}
+.class-detail-hero.el-earth .class-detail-header {
+  background: linear-gradient(180deg, rgba(74, 103, 65, 0.6), transparent);
+}
+.class-detail-hero.el-earth h1,
+.class-detail-hero.el-earth .nickname { color: var(--earth); }
+.class-detail-hero.el-earth .duration-badge {
+  background: rgba(122, 158, 90, 0.2);
+  color: var(--earth);
+  border: 1px solid var(--earth);
+}
+
+.class-detail-hero.el-fire {
+  border-color: var(--fire);
+  box-shadow: 0 8px 32px rgba(226, 88, 34, 0.15);
+}
+.class-detail-hero.el-fire .class-detail-header {
+  background: linear-gradient(180deg, rgba(196, 30, 58, 0.4), transparent);
+}
+.class-detail-hero.el-fire h1,
+.class-detail-hero.el-fire .nickname { color: var(--fire); }
+.class-detail-hero.el-fire .duration-badge {
+  background: rgba(226, 88, 34, 0.2);
+  color: var(--fire);
+  border: 1px solid var(--fire);
+}
+
+.class-detail-hero.el-air {
+  border-color: var(--air);
+  box-shadow: 0 8px 32px rgba(244, 169, 64, 0.15);
+}
+.class-detail-hero.el-air .class-detail-header {
+  background: linear-gradient(180deg, rgba(244, 169, 64, 0.25), transparent);
+}
+.class-detail-hero.el-air h1,
+.class-detail-hero.el-air .nickname { color: var(--air); }
+.class-detail-hero.el-air .duration-badge {
+  background: rgba(244, 169, 64, 0.2);
+  color: var(--air);
+  border: 1px solid var(--air);
+}
+
+.class-detail-hero.el-combat {
+  border-color: var(--combat);
+  box-shadow: 0 8px 32px rgba(148, 163, 184, 0.15);
+}
+.class-detail-hero.el-combat .class-detail-header {
+  background: linear-gradient(180deg, rgba(71, 85, 105, 0.55), transparent);
+}
+.class-detail-hero.el-combat h1,
+.class-detail-hero.el-combat .nickname { color: var(--combat); }
+.class-detail-hero.el-combat .duration-badge {
+  background: rgba(148, 163, 184, 0.2);
+  color: var(--combat);
+  border: 1px solid var(--combat);
+}
+
+.class-detail-hero.el-lightning {
+  border-color: var(--lightning);
+  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.25);
+  animation: lightning-pulse 3s ease-in-out infinite;
+}
+.class-detail-hero.el-lightning .class-detail-header {
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.45), rgba(56, 189, 248, 0.2), transparent);
+}
+.class-detail-hero.el-lightning h1,
+.class-detail-hero.el-lightning .nickname { color: var(--lightning); }
+.class-detail-hero.el-lightning .intensity-badge {
+  background: rgba(56, 189, 248, 0.2);
+  color: var(--lightning);
+  border: 1px solid var(--lightning);
+}
+
+.class-detail-hero.el-kyoshi {
+  border-color: var(--kyoshi);
+  box-shadow: 0 8px 32px rgba(74, 222, 128, 0.15);
+}
+.class-detail-hero.el-kyoshi .class-detail-header {
+  background: linear-gradient(180deg, rgba(22, 101, 52, 0.5), rgba(212, 168, 75, 0.15), transparent);
+}
+.class-detail-hero.el-kyoshi h1 { color: var(--kyoshi); }
+.class-detail-hero.el-kyoshi .nickname { color: var(--kyoshi-gold); }
+.class-detail-hero.el-kyoshi .duration-badge {
+  background: rgba(74, 222, 128, 0.15);
+  color: var(--kyoshi-gold);
+  border: 1px solid var(--kyoshi-gold);
+}
+
+.class-detail-hero.el-blossom {
+  border-color: var(--blossom);
+  box-shadow: 0 8px 32px rgba(249, 168, 212, 0.2);
+}
+.class-detail-hero.el-blossom .class-detail-header {
+  background: linear-gradient(180deg, rgba(252, 231, 243, 0.35), rgba(219, 39, 119, 0.15), transparent);
+}
+.class-detail-hero.el-blossom h1 { color: var(--blossom); }
+.class-detail-hero.el-blossom .nickname { color: var(--blossom-deep); }
+.class-detail-hero.el-blossom .duration-badge {
+  background: rgba(249, 168, 212, 0.2);
+  color: var(--blossom);
+  border: 1px solid var(--blossom);
+}
+
+.class-detail-hero.el-mai {
+  border-color: #262626;
+  background: linear-gradient(180deg, #141414 0%, var(--bg-card) 40%);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+.class-detail-hero.el-mai .class-detail-header {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.9), transparent);
+}
+.class-detail-hero.el-mai h1 { color: var(--text); }
+.class-detail-hero.el-mai .nickname { color: var(--mai-silver); }
+.class-detail-hero.el-mai .duration-badge {
+  background: rgba(163, 163, 163, 0.15);
+  color: var(--mai-silver);
+  border: 1px solid var(--mai-gray);
+}
+
+.workout-list {
+  margin: 0.5rem 0 0 1.25rem;
+  max-width: 720px;
+}
+
+.workout-list li {
+  margin-bottom: 0.65rem;
+  color: var(--text-muted);
+}
+
+.workout-list li strong {
+  color: var(--text);
+}
+
+.class-coach-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.class-coach-link {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid rgba(184, 169, 154, 0.2);
+  transition: border-color 0.2s, transform 0.2s;
+  max-width: 420px;
+}
+
+.class-coach-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(244, 169, 64, 0.4);
+}
+
+.class-coach-link .coach-headshot-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid rgba(244, 169, 64, 0.45);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.class-coach-link h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  color: var(--text);
+}
+
+.class-coach-link .coach-headshot-wrap.water { border-color: var(--water); }
+.class-coach-link .coach-headshot-wrap.earth { border-color: var(--earth); }
+.class-coach-link .coach-headshot-wrap.fire { border-color: var(--fire); }
+.class-coach-link .coach-headshot-wrap.air { border-color: var(--air); }
+.class-coach-link .coach-headshot-wrap.combat { border-color: var(--combat); }
+.class-coach-link .coach-headshot-wrap.lightning { border-color: var(--lightning); }
+.class-coach-link .coach-headshot-wrap.kyoshi { border-color: var(--kyoshi-gold); }
+.class-coach-link .coach-headshot-wrap.tylee { border-color: var(--blossom); }
+.class-coach-link .coach-headshot-wrap.mai { border-color: var(--mai-gray); }
+
+.class-schedule-wrap {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.class-schedule-table {
+  min-width: 480px;
+}
+
+.class-registration-section {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(184, 169, 154, 0.25);
+}
+
+.class-registration-section.el-lightning {
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.1);
+}
+
+.class-registration-section.el-mai {
+  border-color: #262626;
+  background: linear-gradient(180deg, #141414 0%, var(--bg-card) 30%);
 }
 
 

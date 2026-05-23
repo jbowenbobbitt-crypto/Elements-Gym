@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <title>Earthbender Grind — Element Masters Gym</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img src="/logo.svg" alt="" class="logo-mark" width="44" height="44">
+        <span>Element Masters <em>Gym</em></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule.html">Schedule</a></li>
+          <li><a href="/classes.html" class="active">Classes</a></li>
+          <li><a href="/cafe.html">Café</a></li>
+          <li><a href="/equipment.html">Equipment</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/nutrition.html">Nutrition</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="/classes.html" class="coach-back">← Back to Classes</a>
+
+    <div class="class-detail-hero el-earth">
+      <div class="class-detail-header">
+        <div class="element-icon">🪨</div>
+        <p class="nickname">The Stone</p>
+        <h1>Earthbender Grind</h1>
+        <span class="duration-badge">45 Minutes</span>
+      </div>
+    </div>
+
+    <section class="coach-section">
+      <h2>About This Class</h2>
+      <p>
+        Toph doesn't care about flashy reps — she cares that you stay grounded. <em>The Stone</em> is 45 minutes of
+        uncompromising strength work modeled on earthbending's immovable stance: heavy loads, long holds, and
+        zero wobble. You'll feel like you could stop a platypus bear in its tracks by the end.
+      </p>
+      <ul class="workout-list">
+        <li><strong>Badgermole Burrow Squats</strong> — tempo back squats with pause reps at the bottom.</li>
+        <li><strong>Granite Deadlift Ladder</strong> — ascending deadlift sets that build raw pulling power.</li>
+        <li><strong>Seismic Hold Challenge</strong> — farmer carries and front-rack holds for grip and core.</li>
+        <li><strong>Blind Bandit Finisher</strong> — sled pushes and sandbag carries until the floor shakes.</li>
+      </ul>
+    </section>
+
+    <section class="coach-section">
+      <h2>Your Coach</h2>
+      <div class="class-coach-row">
+        <a href="/team/toph.html" class="class-coach-link">
+          <div class="coach-headshot-wrap earth">
+            <img loading="lazy" src="/images/coaches/toph.png" alt="Toph" class="coach-headshot">
+          </div>
+          <div>
+            <h3>Toph</h3>
+            <p class="coach-badge earth">Earth — Strength & Power</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="coach-section">
+      <h2>Weekly Schedule</h2>
+      <p>Three sessions daily, Monday through Friday, within <a href="/schedule.html">gym hours</a> (8:00 AM – 9:00 PM). Each class is 45 minutes.</p>
+      <div class="class-schedule-wrap">
+        <table class="schedule class-schedule-table" aria-label="Earthbender Grind weekly times">
+          <thead>
+            <tr>
+              <th scope="col">Days</th>
+              <th scope="col">Morning</th>
+              <th scope="col">Midday</th>
+              <th scope="col">Evening</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday – Friday</td>
+              <td><span class="hours-badge">9:00 AM</span></td>
+              <td><span class="hours-badge">1:30 PM</span></td>
+              <td><span class="hours-badge">7:00 PM</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="class-registration-section coach-section" id="register">
+      <h2>Register for Earthbender Grind</h2>
+      <form class="class-registration-form" data-class="Earthbender Grind">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="date">Preferred date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-row">
+          <label for="time">Session time</label>
+          <select id="time" name="time" required>
+            <option value="9:00 AM">9:00 AM</option>
+            <option value="1:30 PM">1:30 PM</option>
+            <option value="7:00 PM">7:00 PM</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Notes (optional)</label>
+          <textarea id="message" name="message" placeholder="Experience level, injuries, or goals"></textarea>
+        </div>
+        <button type="submit" class="btn">Register for Class</button>
+      </form>
+      <div class="form-success" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="gym-motto">Become the Avatar of your life</p>
+    <p>Element Masters <span class="brand-footer">Gym</span> — Water · Earth · Fire · Air</p>
+    <p class="footer-meta">© 2026 Element Masters Gym</p>
+  </footer>
+  <script src="/coach-form.js"></script>
+</body>
+</html>

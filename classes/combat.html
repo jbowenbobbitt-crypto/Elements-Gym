@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <title>Combat — Element Masters Gym</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img src="/logo.svg" alt="" class="logo-mark" width="44" height="44">
+        <span>Element Masters <em>Gym</em></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule.html">Schedule</a></li>
+          <li><a href="/classes.html" class="active">Classes</a></li>
+          <li><a href="/cafe.html">Café</a></li>
+          <li><a href="/equipment.html">Equipment</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/nutrition.html">Nutrition</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="/classes.html" class="coach-back">← Back to Classes</a>
+
+    <div class="class-detail-hero el-combat">
+      <div class="class-detail-header">
+        <div class="element-icon">⚔️</div>
+        <p class="nickname">The Battalion</p>
+        <h1>Combat</h1>
+        <span class="duration-badge">1 Hour 30 Minutes</span>
+      </div>
+    </div>
+
+    <section class="coach-section">
+      <h2>About This Class</h2>
+      <p>
+        Sokka runs <em>The Battalion</em> like a Southern Water Tribe war council — loud, organized, and absolutely
+        unforgiving. This 90-minute boot camp covers striking, partner defense, and tactical drills that would make
+        his dad proud. Show up on time, follow orders, and don't complain about the burpees.
+      </p>
+      <ul class="workout-list">
+        <li><strong>Southern Water Tribe Drill Formation</strong> — synchronized calisthenics and marching patterns to build unit cohesion.</li>
+        <li><strong>Boomerang Strike Combos</strong> — pad work combining jabs, crosses, hooks, and defensive slips.</li>
+        <li><strong>Invasion Tactics Partner Defense</strong> — two-person scenarios for blocks, counters, and footwork under pressure.</li>
+        <li><strong>Commander's Endurance Gauntlet</strong> — a timed circuit of sprints, carries, and bodyweight finishers.</li>
+      </ul>
+    </section>
+
+    <section class="coach-section">
+      <h2>Your Coach</h2>
+      <div class="class-coach-row">
+        <a href="/team/sokka.html" class="class-coach-link">
+          <div class="coach-headshot-wrap combat">
+            <img loading="lazy" src="/images/coaches/sokka.png" alt="Sokka" class="coach-headshot">
+          </div>
+          <div>
+            <h3>Sokka</h3>
+            <p class="coach-badge combat">Combat — Military Training</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="coach-section">
+      <h2>Weekly Schedule</h2>
+      <p>Two sessions daily, Monday through Friday, within <a href="/schedule.html">gym hours</a> (8:00 AM – 9:00 PM). Each class is 1 hour 30 minutes.</p>
+      <div class="class-schedule-wrap">
+        <table class="schedule class-schedule-table" aria-label="Combat weekly times">
+          <thead>
+            <tr>
+              <th scope="col">Days</th>
+              <th scope="col">Early Session</th>
+              <th scope="col">Afternoon Session</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday – Friday</td>
+              <td><span class="hours-badge">8:00 AM</span></td>
+              <td><span class="hours-badge">4:00 PM</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="class-registration-section coach-section" id="register">
+      <h2>Register for Combat</h2>
+      <form class="class-registration-form" data-class="Combat">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="date">Preferred date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-row">
+          <label for="time">Session time</label>
+          <select id="time" name="time" required>
+            <option value="8:00 AM">8:00 AM</option>
+            <option value="4:00 PM">4:00 PM</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Notes (optional)</label>
+          <textarea id="message" name="message" placeholder="Experience level, injuries, or goals"></textarea>
+        </div>
+        <button type="submit" class="btn">Register for Class</button>
+      </form>
+      <div class="form-success" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="gym-motto">Become the Avatar of your life</p>
+    <p>Element Masters <span class="brand-footer">Gym</span> — Water · Earth · Fire · Air</p>
+    <p class="footer-meta">© 2026 Element Masters Gym</p>
+  </footer>
+  <script src="/coach-form.js"></script>
+</body>
+</html>

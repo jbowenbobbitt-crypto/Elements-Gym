@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <title>Yoga — Element Masters Gym</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img src="/logo.svg" alt="" class="logo-mark" width="44" height="44">
+        <span>Element Masters <em>Gym</em></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule.html">Schedule</a></li>
+          <li><a href="/classes.html" class="active">Classes</a></li>
+          <li><a href="/cafe.html">Café</a></li>
+          <li><a href="/equipment.html">Equipment</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/nutrition.html">Nutrition</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="/classes.html" class="coach-back">← Back to Classes</a>
+
+    <div class="class-detail-hero el-blossom">
+      <div class="class-detail-header">
+        <div class="element-icon">🌸</div>
+        <p class="nickname">Blossom Flow</p>
+        <h1>Yoga</h1>
+        <span class="duration-badge">45 Minutes</span>
+      </div>
+    </div>
+
+    <section class="coach-section">
+      <h2>About This Class</h2>
+      <p>
+        Ty Lee's <em>Blossom Flow</em> turns the studio into a petal-strewn sanctuary of movement. This 45-minute
+        session blends acrobatic yoga, circus-inspired flexibility, and playful balance work. Energy stays bright
+        and encouraging — perfect after heavy earth days or before air agility work.
+      </p>
+      <ul class="workout-list">
+        <li><strong>Petal Salutation Flow</strong> — a blossom-themed sun salutation with hip circles and arm waves.</li>
+        <li><strong>Acrobat Hip Openers</strong> — pigeon, lizard, and frog poses drawn from circus warm-ups.</li>
+        <li><strong>Chi-Block Balance Poses</strong> — tree, dancer, and crow variations with playful transitions.</li>
+        <li><strong>Blossom Stillness Cooldown</strong> — gentle twists and seated breathing to close the session.</li>
+      </ul>
+    </section>
+
+    <section class="coach-section">
+      <h2>Your Coach</h2>
+      <div class="class-coach-row">
+        <a href="/team/ty-lee.html" class="class-coach-link">
+          <div class="coach-headshot-wrap tylee">
+            <img loading="lazy" src="/images/coaches/ty-lee.png" alt="Ty Lee" class="coach-headshot">
+          </div>
+          <div>
+            <h3>Ty Lee</h3>
+            <p class="coach-badge tylee">Yoga · Blossom Flow</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="coach-section">
+      <h2>Weekly Schedule</h2>
+      <p>Three sessions daily, Monday through Friday, within <a href="/schedule.html">gym hours</a> (8:00 AM – 9:00 PM). Each class is 45 minutes.</p>
+      <div class="class-schedule-wrap">
+        <table class="schedule class-schedule-table" aria-label="Yoga weekly times">
+          <thead>
+            <tr>
+              <th scope="col">Days</th>
+              <th scope="col">Morning</th>
+              <th scope="col">Midday</th>
+              <th scope="col">Evening</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday – Friday</td>
+              <td><span class="hours-badge">8:30 AM</span></td>
+              <td><span class="hours-badge">1:00 PM</span></td>
+              <td><span class="hours-badge">6:30 PM</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="class-registration-section coach-section" id="register">
+      <h2>Register for Yoga</h2>
+      <form class="class-registration-form" data-class="Yoga">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="date">Preferred date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-row">
+          <label for="time">Session time</label>
+          <select id="time" name="time" required>
+            <option value="8:30 AM">8:30 AM</option>
+            <option value="1:00 PM">1:00 PM</option>
+            <option value="6:30 PM">6:30 PM</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Notes (optional)</label>
+          <textarea id="message" name="message" placeholder="Experience level, injuries, or goals"></textarea>
+        </div>
+        <button type="submit" class="btn">Register for Class</button>
+      </form>
+      <div class="form-success" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="gym-motto">Become the Avatar of your life</p>
+    <p>Element Masters <span class="brand-footer">Gym</span> — Water · Earth · Fire · Air</p>
+    <p class="footer-meta">© 2026 Element Masters Gym</p>
+  </footer>
+  <script src="/coach-form.js"></script>
+</body>
+</html>

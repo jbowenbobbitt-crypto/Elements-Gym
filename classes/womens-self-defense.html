@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <title>Women's Self Defense — Element Masters Gym</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img src="/logo.svg" alt="" class="logo-mark" width="44" height="44">
+        <span>Element Masters <em>Gym</em></span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule.html">Schedule</a></li>
+          <li><a href="/classes.html" class="active">Classes</a></li>
+          <li><a href="/cafe.html">Café</a></li>
+          <li><a href="/equipment.html">Equipment</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/nutrition.html">Nutrition</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="/classes.html" class="coach-back">← Back to Classes</a>
+
+    <div class="class-detail-hero el-kyoshi">
+      <div class="class-detail-header">
+        <div class="element-icon">🪭</div>
+        <p class="nickname">Kyoshi Guard</p>
+        <h1>Women's Self Defense</h1>
+        <span class="duration-badge">1 Hour 30 Minutes</span>
+      </div>
+    </div>
+
+    <section class="coach-section">
+      <h2>About This Class</h2>
+      <p>
+        Suki leads <em>Kyoshi Guard</em> with the same precision she used commanding the warriors of Kyoshi Island.
+        This 90-minute session teaches real-world self-defense through stances, blocks, strikes, and escapes — using
+        pads and trainers, not metal fans. Open to all women; no experience required, only respect for the craft.
+      </p>
+      <ul class="workout-list">
+        <li><strong>Kyoshi Warrior Stance Foundations</strong> — footwork, posture, and distance management drills.</li>
+        <li><strong>Fan Block & Strike Patterns</strong> — pad work for blocks, palm strikes, and elbow counters.</li>
+        <li><strong>Wrist Escape Progressions</strong> — step-by-step releases from common grabs and holds.</li>
+        <li><strong>Suki's Awareness Circuit</strong> — scenario drills for boundary-setting, verbal de-escalation, and ground recovery.</li>
+      </ul>
+    </section>
+
+    <section class="coach-section">
+      <h2>Your Coach</h2>
+      <div class="class-coach-row">
+        <a href="/team/suki.html" class="class-coach-link">
+          <div class="coach-headshot-wrap kyoshi">
+            <img loading="lazy" src="/images/coaches/suki.png" alt="Suki" class="coach-headshot">
+          </div>
+          <div>
+            <h3>Suki</h3>
+            <p class="coach-badge kyoshi">Kyoshi Warrior — Women's Self Defense</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="coach-section">
+      <h2>Weekly Schedule</h2>
+      <p>Two sessions daily, Monday through Friday, within <a href="/schedule.html">gym hours</a> (8:00 AM – 9:00 PM). Each class is 1 hour 30 minutes.</p>
+      <div class="class-schedule-wrap">
+        <table class="schedule class-schedule-table" aria-label="Women's Self Defense weekly times">
+          <thead>
+            <tr>
+              <th scope="col">Days</th>
+              <th scope="col">Late Morning</th>
+              <th scope="col">Evening</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday – Friday</td>
+              <td><span class="hours-badge">10:30 AM</span></td>
+              <td><span class="hours-badge">5:00 PM</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="class-registration-section coach-section" id="register">
+      <h2>Register for Women's Self Defense</h2>
+      <form class="class-registration-form" data-class="Women's Self Defense">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="date">Preferred date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-row">
+          <label for="time">Session time</label>
+          <select id="time" name="time" required>
+            <option value="10:30 AM">10:30 AM</option>
+            <option value="5:00 PM">5:00 PM</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Notes (optional)</label>
+          <textarea id="message" name="message" placeholder="Experience level, injuries, or goals"></textarea>
+        </div>
+        <button type="submit" class="btn">Register for Class</button>
+      </form>
+      <div class="form-success" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="gym-motto">Become the Avatar of your life</p>
+    <p>Element Masters <span class="brand-footer">Gym</span> — Water · Earth · Fire · Air</p>
+    <p class="footer-meta">© 2026 Element Masters Gym</p>
+  </footer>
+  <script src="/coach-form.js"></script>
+</body>
+</html>
